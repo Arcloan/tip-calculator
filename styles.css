@@ -1,0 +1,52 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--dark-grayish-cyan);
+    background-color: var(--light-grayish-cyan);
+}
+
+.splitter {
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    max-inline-size: min-content;
+    margin-inline: auto;
+    font-weight: bold;
+    margin-block: 1em;
+}
+
+.card {
+    background-color: var(--white);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    padding: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}

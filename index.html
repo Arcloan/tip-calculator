@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="splitter">
+        <p>SPLI<br />TTER</p>
+      </div>
+      <div class="card">
+        <div class="bill">
+          <label for="total">Bill</label>
+          <input type="number" />
+        </div>
+        <div class="select_tip">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button class="custom_button">Custom</button>
+        </div>
+        <div class="number_of_people">
+          <label for="n_people">Number of People</label>
+          <input type="number" />
+        </div>
+        <div class="result">
+          <div class="tip flex">
+            <p>
+              <span class="bold white">Tip Amount</span><br />
+              / person
+            </p>
+            <p><span class="output_tip"></span></p>
+          </div>
+          <div class="total flex">
+            <p>
+              <span class="bold white">Total</span><br />
+              / person
+            </p>
+            <p><span class="output_total"></span></p>
+          </div>
+          <button class="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
