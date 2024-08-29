@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --strong-cyan: hsl(172, 67%, 45%);
 
@@ -28,15 +30,52 @@ body {
     min-height: 100vh;
     color: var(--dark-grayish-cyan);
     background-color: var(--light-grayish-cyan);
+    font-family: "Space Mono" , sans-serif;
 }
 
 .splitter {
-    font-size: 1.5rem;
-    letter-spacing: 0.5em;
     max-inline-size: min-content;
     margin-inline: auto;
     font-weight: bold;
-    margin-block: 1em;
+    margin-block: 2em;
+}
+
+:is(.bill, .number_of_people) > input {
+    width: 100%;
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
+    background-color: var(--very-light-grayish-cyan);
+}
+
+input {
+    direction: rtl;
+    color: var(--very-dark-cyan);
+    text-transform: uppercase;
+}
+
+input, .button, button {
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.button:has(input:checked) {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.button {
+    display: grid;
+    place-content: center;
+}
+
+.button > label {
+    cursor: pointer;
+    text-align: center;
+    margin-block: 0.375em;
+}
+
+input[type="checkbox"] {
+    display: none;
 }
 
 .card {
@@ -46,7 +85,133 @@ body {
     padding: 1em;
 }
 
+.information > * + * {
+    margin-top: 1em;
+}
+
+.result {
+    margin-top: 1em;
+}
+
 label {
     display: block;
     margin-bottom: 0.5em;
+    position: relative;
+}
+
+.grid_button {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.grid_button > * {
+    background-color: var(--very-dark-cyan);
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.125rem;
+}
+
+.grid_button > input {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--dark-grayish-cyan);
+    padding-inline-start: 1em;
+}
+
+#n_people {
+    outline: red;
+}
+
+.result {
+    padding: 1em;
+    padding-block-start: 2em;
+    display: grid;
+    gap: 1em;
+    background-color: var(--very-dark-cyan);
+    border-radius: 0.5em;
+}
+
+.total {
+    margin-block-end: 1em;
+}
+
+.white {
+    color: var(--white);
+}
+
+.output_tip, .output_total {
+    color: var(--strong-cyan);
+    font-size: 2rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset {
+    margin-block-start: auto;
+    padding: 0.75em;
+    background-color: var(--strong-cyan);
+    border: none;
+    color: var(--very-dark-cyan);
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+}
+
+.reset:active {
+    background-color: var(--light-grayish-cyan);
+}
+
+.card svg {
+    position: absolute;
+    bottom: -1.9em;
+    left: 0.75em;
+}
+
+.hidden {
+    display: none;
+}
+
+.error.error {
+    color: red;
+    border-color: red;
+}
+
+p.error {
+    margin-bottom: 0.5em;
+}
+
+@media (min-width : 900px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        padding: 2em;
+        border-radius: 1em;
+        max-inline-size: 60%;
+        margin-inline: auto;
+    }
+
+    .information > * + * {
+        margin-block-start: 2em;
+    }
+
+    .grid_button {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .result {
+        padding: 2em;
+        grid-template-rows: min-content min-content;
+        gap: 1.5em;
+    }
+
+    .splitter {
+        margin-block-start: 6em;
+        margin-block-end: 3em;
+    }
+
 }
